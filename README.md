@@ -1,87 +1,87 @@
 # Project Title
 
-One Paragraph of project description goes here
+Simple Web Server
 
 ## Getting Started
+A Java-based web server that supports handling multiple concurrent requests and serves static files such as HTML, CSS, JavaScript, and images. It also includes asynchronous communication with REST services on the backend.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+1. git clone https://github.com/cristiandavid0124/Lab1-Arep.git
 
-Say what the step will be
+2. Build the Project
+Ensure you have Maven installed. Build the project using:
 
-```
-Give the example
-```
+mvn clean install
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
-
-Add additional notes about how to deploy this on a live system
+1. Start Server
+You can run  java -cp target/miprimera-app-1.0-SNAPSHOT.jar WebService
+2. Access the Web Application 
+Open your web browser and navigate to http://localhost:8080/index.html to see the application in action.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+src
+├── main
+│   ├
+│   │              
+│    └── RestService.java
+│   ├── WebRest.java
+│   └── WebService.java
+│   └
+│    └── webroot
+│      ├── app.js
+│      │   
+│      ├── index.html
+│      └── style.css
+└── test
+    └── java
+        └── edu
+            └── escuelaing
+                └── arem
+                    └── ASE
+                        └── app
+                            └── AppTest.java
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Main Components
+1. RestService  This is an interface that defines the methods that must be implemented by any class that handles REST services.
+2. WebRest Implements the RestService interface and provides the logic for handling specific REST requests. In your case, it manages a list of players in JSON format.
+3. WebService  Starts and manages the web server. Listens for incoming requests and delegates the handling of these requests to appropriate RestService instances
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Static Files
+ 1. index.html: The main HTML page for the web application. It includes a button to fetch data from the REST endpoint and a form to submit data via POST.
+ 2. styles.css: Contains the CSS styles for the web application, providing a responsive and user-friendly interface.
+ 3.  app.js: JavaScript file that handles asynchronous requests and updates the DOM based on user interactions.
 
-## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+ ## Testing
+ In the workshop I proposed creating a simple web app in which you can save soccer players, see how many soccer players there are, delete players and finally edit these players.
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+ 1. add player 
+ ![alt text](image.png)
+ ![alt text](image-1.png)
+ ![alt text](image-2.png)
+ ![alt text](image-3.png)
 
-## License
+ 2. delete player 
+ ![alt text](image-8.png)
+ ![alt text](image-9.png)
+ ![alt text](image-10.png)
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+ 3. update player 
+ ![alt text](image-5.png)
+ ![alt text](image-6.png)
+ ![alt text](image-7.png)
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+![alt text](image-11.png)
+
+## Autor
+Cristian Naranjo - Developer and Author of the Project

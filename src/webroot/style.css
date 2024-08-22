@@ -2,18 +2,14 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    background-image: url('fondo.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Previene que la imagen se repita */
     margin: 0;
     padding: 0;
     color: #333;
 }
-
-img.banner {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
 
 .container {
     display: flex;
@@ -32,13 +28,14 @@ img.banner {
 }
 
 /* Data Output Styles */
-pre#dataOutput {
-    background: #eee;
-    padding: 45px;
+#dataOutput {
+    background: #fff; /* Cambia el fondo a blanco para que los nombres sean más visibles */
+    padding: 15px; /* Ajusta el padding para un mejor espaciado */
     border-radius: 4px;
     max-height: 300px;
     overflow-y: auto;
-    white-space: pre-wrap; /* Ensures long lines are wrapped */
+    white-space: normal; /* Permite que el texto se ajuste a la línea */
+    color: #333; /* Cambia el color del texto para un mejor contraste */
 }
 
 /* Button Styles */
@@ -84,4 +81,11 @@ input[type="text"]:focus {
 h2 {
     margin-top: 0;
     color: #007BFF;
+}
+
+/* Additional styles for player names */
+.jugador-nombre {
+    font-size: 18px;
+    color: #007BFF; /* Color del texto de los nombres */
+    margin-bottom: 10px;
 }
