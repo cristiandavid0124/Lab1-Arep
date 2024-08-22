@@ -27,28 +27,6 @@ Open your web browser and navigate to http://localhost:8080/index.html to see th
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-src
-├── main
-│   ├
-│   │              
-│    └── RestService.java
-│   ├── WebRest.java
-│   └── WebService.java
-│   └
-│    └── webroot
-│      ├── app.js
-│      │   
-│      ├── index.html
-│      └── style.css
-└── test
-    └── java
-        └── edu
-            └── escuelaing
-                └── arem
-                    └── ASE
-                        └── app
-                            └── AppTest.java
-
 ## Main Components
 1. RestService  This is an interface that defines the methods that must be implemented by any class that handles REST services.
 2. WebRest Implements the RestService interface and provides the logic for handling specific REST requests. In your case, it manages a list of players in JSON format.
