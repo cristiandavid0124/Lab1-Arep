@@ -43,23 +43,21 @@ Open your web browser and navigate to http://localhost:8080/index.html to see th
  In the workshop I proposed creating a simple web app in which you can save soccer players, see how many soccer players there are, delete players and finally edit these players.
 
  1. add player 
- ![alt text](image.png)
- ![alt text](image-1.png)
- ![alt text](image-2.png)
- ![alt text](image-3.png)
+ ![alt text](img/image.png)
+ ![alt text](img/image-1.png)
+ ![alt text](img/image-2.png)
+ ![alt text](img/image-3.png)
 
  2. delete player 
- ![alt text](image-8.png)
- ![alt text](image-9.png)
- ![alt text](image-10.png)
-
+ ![alt text](img/image-8.png)
+ ![alt text](img/image-9.png)
+ ![alt text](img/image-10.png)
 
  3. update player 
- ![alt text](image-5.png)
- ![alt text](image-6.png)
- ![alt text](image-7.png)
-
-![alt text](image-11.png)
+ ![alt text](img/image-5.png)
+ ![alt text](img/image-6.png)
+ ![alt text](img/image-7.png)
+![alt text](img/image-11.png)
 
 ## Autor
 Cristian Naranjo - Developer and Author of the Project
