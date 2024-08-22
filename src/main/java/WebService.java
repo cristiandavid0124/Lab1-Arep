@@ -15,13 +15,7 @@ public class WebService {
     private static final String WEB_ROOT = "src/webroot";
     private static final Map<String, RESTService> services = new HashMap<>();
 
-     /**
-     * Método principal que inicia el servidor web.
-     * Crea un {@link ServerSocket} para escuchar en el puerto especificado y acepta conexiones entrantes.
-     * Cada conexión es manejada en un hilo separado utilizando {@link ClientHandler}.
-     *
-     * @param args Los argumentos de línea de comandos (no utilizados).
-     */
+  
 
     public static void main(String[] args) {
         addServices();
@@ -39,9 +33,7 @@ public class WebService {
         }
     }
    
-     /**
-     * Añade instancias de servicios REST al mapa de servicios.(GET, POST, PUT, DELETE).
-     */
+   
     public static void addServices() {
         WebRest services = new WebRest();
         WebService.services.put("GET" , services);
@@ -50,27 +42,16 @@ public class WebService {
         WebService.services.put("DELETE" , services);
     }
 
-    /**
-     * Clase interna que maneja la comunicación con un cliente en un hilo separado.
-     * Procesa las solicitudes HTTP y delega el manejo de solicitudes RESTful a los servicios adecuados.
-     */
+   
     private static class ClientHandler implements Runnable {
         private Socket clientSocket;
 
-        /**
-         * Inicializa el {@code ClientHandler} con el {@link Socket} del cliente.
-         *
-         * @param clientSocket El socket del cliente.
-         */
+      
         public ClientHandler(Socket clientSocket) {
             this.clientSocket = clientSocket;
         }
 
-        /**
-         * Método principal que maneja la solicitud del cliente.
-         * Lee la solicitud HTTP, determina el método y recurso solicitado, y llama al servicio adecuado.
-         * Si el recurso no es RESTful, intenta servir un archivo estático.
-         */
+      
         @Override
         public void run() {
             try (BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -123,13 +104,7 @@ public class WebService {
             }
         }
 
-         /**
-         * Sirve archivos estáticos desde el directorio raíz.
-         *
-         * @param resource El recurso solicitado (ruta del archivo).
-         * @param out El flujo de salida para enviar la respuesta al cliente.
-         * @throws IOException Si ocurre un error al leer el archivo o al escribir la respuesta.
-         */
+        
 
         private void serveStaticFile(String resource, OutputStream out) throws IOException {
             Path filePath = Paths.get(WEB_ROOT, resource);
@@ -153,12 +128,7 @@ public class WebService {
             }
         }
         
-  /**
-         * Envía una respuesta 404 Not Found al cliente.
-         *
-         * @param out El flujo de salida para enviar la respuesta al cliente.
-         * @throws IOException Si ocurre un error al escribir la respuesta.
-         */
+ 
         private void send404(OutputStream out) throws IOException {
             String response = "HTTP/1.1 404 Not Found\r\n" +
                     "Content-Type: application/json\r\n" +
